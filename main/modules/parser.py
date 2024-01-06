@@ -25,7 +25,7 @@ def multi_sub(title: str):
     return subtitle
 
 def parse():
-    a = feedparser.parse("https://siftrss.com/f/oyebWJBqN8")
+    a = feedparser.parse("https://nyaa.si/?page=rss&u=varyg1001&q=solo%20leveling")
     b = a["entries"]
     b = b[21:40]
     data = []    
@@ -77,4 +77,4 @@ async def auto_parser():
         except:
             pass
 
-        await asyncio.sleep(30)
+        await asyncio.sleep(60)
