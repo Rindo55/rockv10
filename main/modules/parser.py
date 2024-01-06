@@ -27,7 +27,7 @@ def multi_sub(title: str):
 def parse():
     a = feedparser.parse("https://nyaa.si/?page=rss&u=varyg1001&q=solo%20leveling")
     b = a["entries"]
-    b = b[21:40]
+    b = b[0:1]
     data = []    
 
     for i in b:
