@@ -131,7 +131,7 @@ async def start_uploading(data):
         duration = get_duration(file)
         durationx = get_durationx(file)
         filed = os.path.basename(file)
-        filed = filed.replace("Solo.Leveling.S01E02.Im.Used.to.It.1080p.NF.WEB-DL.AAC2.0.H.264-VARYG", "Solo Leveling S01 - 02 [1080p Web-DL]")
+        filed = filed.replace("Solo.Leveling.S01E02.If.I.Had.One.More.Chance.1080p.AMZN.WEB-DL.DDP2.0.H.264-VARYG", "Solo Leveling S01 - 02 [1080p Web-DL]")
         filed = filed.replace("2nd Season", "S2")
         filed = filed.replace("3rd Season", "S3")
         razo = filed.replace("[1080p Web-DL]", "[720p x265] @animxt")
@@ -169,7 +169,7 @@ async def start_uploading(data):
         subtitle = subtitle.replace("HUN", "Hungarian")
         subtitle = subtitle.replace("UKR", "Ukranian")
         main = await app.send_photo(KAYO_ID,photo=img,caption=caption)
-        guessname = f"**{ghostname}**" + "\n" + f"__({tit})__" + "\n" + "━━━━━━━━━━━━━━━━━━━" + "\n" + "✓  `1080p x264 Web-DL`" + "\n" + f"✓  `{subtitle} ~ Subs`" + "\n" + "#Source #WebDL"
+        guessname = f"**{ghostname}**" + "\n" + f"__({tit})__" + "\n" + "━━━━━━━━━━━━━━━━━━━" + "\n" + "✓  `1080p x264 Web-DL`" + "\n" + f"✓  `English, Indonesian, Japanese [SDH], Malay, Thai, Vietnamese, Chinese ~ Subs`" + "\n" + "#Source #WebDL"
         
         thumbnail = await generate_thumbnail(id,file)
 
@@ -230,7 +230,7 @@ async def start_uploading(data):
                     
             ],
         )
-        orgtext =  "**#Source_File #NF**" + "\n" + f"**‣ File Name: `{filed}`**" + "\n" + "**‣ Video**: `1080p x264`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `{subtitle}`" + "\n" + f"**‣ File Size**: `{nyaasize}`" + "\n" + f"**‣ Duration**: {durationx}" + "\n" + f"**‣ Downloads**: [🔗Telegram File]({source_link}) [🔗BETA DL]({nyaa_text})"
+        orgtext =  "**#Source_File #AMZN**" + "\n" + f"**‣ File Name: `{filed}`**" + "\n" + "**‣ Video**: `1080p x264`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `English, Indonesian, Japanese [SDH], Malay, Thai, Vietnamese, Chinese`" + "\n" + f"**‣ File Size**: `{nyaasize}`" + "\n" + f"**‣ Duration**: {durationx}" + "\n" + f"**‣ Downloads**: [🔗Telegram File]({source_link}) [🔗BETA DL]({nyaa_text})"
         rep_id = int(main.message_id)
         await asyncio.sleep(5)
         untextx = await app.send_message(
@@ -241,7 +241,7 @@ async def start_uploading(data):
         await asyncio.sleep(3)
         unitext = await untextx.edit(orgtext, reply_markup=repl_markup)
         await asyncio.sleep(5)
-        sourcetext =  f"**#Encoded_File #NF**" + "\n" + f"**‣ File Name**: `{razo}`" + "\n" + "**‣ Video**: `720p HEVC x265 10Bit`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `{subtitle}`"
+        sourcetext =  f"**#Encoded_File #AMZN**" + "\n" + f"**‣ File Name**: `{razo}`" + "\n" + "**‣ Video**: `720p HEVC x265 10Bit`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `English, Indonesian, Japanese [SDH], Malay, Thai, Vietnamese, Chinese`"
         untext = await app.send_message(
                       chat_id=KAYO_ID,
                       text=sourcetext,
