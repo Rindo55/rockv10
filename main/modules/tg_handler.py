@@ -241,7 +241,7 @@ async def start_uploading(data):
         await asyncio.sleep(3)
         unitext = await untextx.edit(orgtext, reply_markup=repl_markup)
         await asyncio.sleep(5)
-        sourcetext =  f"**#Encoded_File**" + "\n" + f"**‣ File Name**: `{razo}`" + "\n" + "**‣ Video**: `720p HEVC x265 10Bit`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `{subtitle}`"
+        sourcetext =  f"**#Encoded_File #NF**" + "\n" + f"**‣ File Name**: `{razo}`" + "\n" + "**‣ Video**: `720p HEVC x265 10Bit`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `{subtitle}`"
         untext = await app.send_message(
                       chat_id=KAYO_ID,
                       text=sourcetext,
