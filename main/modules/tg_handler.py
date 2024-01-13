@@ -215,8 +215,9 @@ async def start_uploading(data):
         unitext = await untextx.edit(orgtext, reply_markup=repl_markup)
         await asyncio.sleep(5)
         sourcetext =  f"**#Encoded_File #AMZN**" + "\n" + f"**‣ File Name**: `{razo}`" + "\n" + "**‣ Video**: `720p HEVC x265 10Bit`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `English, Indonesian, Japanese [SDH], Malay, Thai, Vietnamese, Chinese`"
-        untext = await app.send_message(
+        untext = await app.edit_message_text(
                       chat_id=KAYO_ID,
+                      medsage_id=39489,
                       text=sourcetext,
                       reply_to_message_id=rep_id
                   )
@@ -226,7 +227,7 @@ async def start_uploading(data):
         await asyncio.sleep(5)
         compressed = await compress_video(duration,untext,name,sourcetext)
         
-        dingdong = await app.edit_message_text(chat_id=-1001159872623, message_id=39489, sourcetext)
+        dingdong = await app.edit_message_text(chat_id=-1001159872623, message_id=39489, text=sourcetext)
 
 
         if compressed == "None" or compressed == None:
