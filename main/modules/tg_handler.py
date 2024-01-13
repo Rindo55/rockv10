@@ -103,7 +103,6 @@ async def start_uploading(data):
         link = data["link"]
         size = data["size"]
         nyaasize = data["size"]
-        subtitle = data["subtitle"]
         name, ext = title.split(".")
 
         name += f" @animxt." + ext
@@ -141,33 +140,7 @@ async def start_uploading(data):
         ghostname = ghostname.replace("[1080p]", "")
         ghostname = ghostname.replace("2nd Season", "S2")
         ghostname = ghostname.replace("3rd Season", "S3")
-        subtitle = subtitle.replace("][", ", ")
-        subtitle = subtitle.replace("[", "")
-        subtitle = subtitle.replace("]", "")     
-        subtitle = subtitle.replace("ENG", "English")
-        subtitle = subtitle.replace("POR-BR", "Portuguese (Brazil)")
-        subtitle = subtitle.replace("SPA-LA", "Spanish (Latin America)")
-        subtitle = subtitle.replace("SPA", "Spanish")
-        subtitle = subtitle.replace("ARA", "Arabic")
-        subtitle = subtitle.replace("FRE", "French")
-        subtitle = subtitle.replace("GER", "German")
-        subtitle = subtitle.replace("ITA", "Italian")
-        subtitle = subtitle.replace("RUS", "Russian")
-        subtitle = subtitle.replace("HIN", "Hindi")
-        subtitle = subtitle.replace("RUM", "Romanian")
-        subtitle = subtitle.replace("FIN", "Finnish")
-        subtitle = subtitle.replace("MAY", "Malaysian")
-        subtitle = subtitle.replace("SWE", "Swedish")
-        subtitle = subtitle.replace("GRE", "Greek")
-        subtitle = subtitle.replace("HEB", "Hebrew")
-        subtitle = subtitle.replace("JPN", "Japanese")
-        subtitle = subtitle.replace("POL", "Polish")
-        subtitle = subtitle.replace("DUT", "Dutch")
-        subtitle = subtitle.replace("FIL", "Filipino")
-        subtitle = subtitle.replace("CES", "Czech")
-        subtitle = subtitle.replace("HRV", "Croatian")
-        subtitle = subtitle.replace("HUN", "Hungarian")
-        subtitle = subtitle.replace("UKR", "Ukranian")
+        
         main = await app.send_photo(KAYO_ID,photo=img,caption=caption)
         guessname = f"**{ghostname}**" + "\n" + f"__({tit})__" + "\n" + "━━━━━━━━━━━━━━━━━━━" + "\n" + "✓  `1080p x264 Web-DL`" + "\n" + f"✓  `English, Indonesian, Japanese [SDH], Malay, Thai, Vietnamese, Chinese ~ Subs`" + "\n" + "#Source #WebDL"
         
