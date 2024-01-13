@@ -14,7 +14,7 @@ def trim_title(title: str):
     title = title.replace("Shangri-La Frontier - Kusogee Hunter, Kamige ni Idoman to Su", "Shangri-La Frontier")
     title = title.replace("Hataraku Maou-sama!! Part 2", "The Devil is a Part-Timer! S2 Part 2")
     title = title.replace("Tian Guan Ci Fu Di Er Ji", "Heaven Official's Blessing S2")
-    title = title.replace("Solo Leveling S01E02 Im Used to It 1080p NF WEB-DL AAC2.0 H 264-VARYG (Ore dake Level Up na Ken, Multi-Subs)", "Solo Leveling - 02")
+    title = title.replace("Solo Leveling S01E02 If I Had One More Chance 1080p AMZN WEB-DL DDP2.0 H 264-VARYG (Ore dake Level Up na Ken, Multi-Subs)", "Solo Leveling - 02")
     ext = ".mkv"
     title = title + ext
     return title
