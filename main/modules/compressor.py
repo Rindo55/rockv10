@@ -91,13 +91,13 @@ async def compress_video(total_time,untext,name,sourcetext):
 
         try:
 
-          await untext.edit(progress_str)
+          await untext.edit_message_text(chat_id=-100115987262, message_id=39489, progress_str)
 
         except:
 
             pass
 
-      await asyncio.sleep(20)
+      await asyncio.sleep(15)
 
     if os.path.lexists(out):
 
