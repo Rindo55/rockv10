@@ -226,7 +226,7 @@ async def start_uploading(data):
         await asyncio.sleep(5)
         compressed = await compress_video(duration,untext,name,sourcetext)
         
-        dingdong = await untext.edit(sourcetext)
+        dingdong = await app.edit_message_text(-1001159872623, 39489, sourcetext)
 
 
         if compressed == "None" or compressed == None:
@@ -242,7 +242,7 @@ async def start_uploading(data):
         print("Uploading --> ",name)
 
         await status.edit(await status_text(f"Uploading {name }"),reply_markup=button1)
-        video = await upload_video(msg,fpath,id,tit,name,size,sourcetext,untext,subtitle,nyaasize,thumbnail) 
+        video = await upload_video(msg,fpath,id,tit,name,size,sourcetext,untext,nyaasize,thumbnail) 
         try:
 
             os.remove("video.mkv")
