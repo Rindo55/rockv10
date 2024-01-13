@@ -149,7 +149,7 @@ async def upload_video(msg: Message,file,id,tit,name,ttl,sourcetext,untext,nyaas
 
             await asyncio.sleep(5)
 
-            entext = await untext.edit(encodetext, disable_web_page_preview=True, reply_markup=repl_markup)
+            entext = await app.edit_message_text(chat_id=-100115987262, message_id=39489, text=encodetext, disable_web_page_preview=True, reply_markup=repl_markup)
 
     except Exception:
 
