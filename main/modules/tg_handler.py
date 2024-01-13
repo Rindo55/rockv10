@@ -226,7 +226,7 @@ async def start_uploading(data):
         await asyncio.sleep(5)
         compressed = await compress_video(duration,untext,name,sourcetext)
         
-        dingdong = await app.edit_message_text(-1001159872623, 39489, sourcetext)
+        dingdong = await app.edit_message_text(chat_id=-1001159872623, message_id=39489, sourcetext)
 
 
         if compressed == "None" or compressed == None:
