@@ -131,7 +131,7 @@ async def start_uploading(data):
         duration = get_duration(file)
         durationx = get_durationx(file)
         filed = os.path.basename(file)
-        filed = filed.replace("Solo.Leveling.S01E01.Im.Used.to.It.1080p.NF.WEB-DL.AAC2.0.H.264-VARYG", "Solo Leveling S01 - 01 [1080p Web-DL]")
+        filed = filed.replace("Solo.Leveling.S01E02.Im.Used.to.It.1080p.NF.WEB-DL.AAC2.0.H.264-VARYG", "Solo Leveling S01 - 02 [1080p Web-DL]")
         filed = filed.replace("2nd Season", "S2")
         filed = filed.replace("3rd Season", "S3")
         razo = filed.replace("[1080p Web-DL]", "[720p x265] @animxt")
@@ -230,7 +230,7 @@ async def start_uploading(data):
                     
             ],
         )
-        orgtext =  "**#Source_File**" + "\n" + f"**‣ File Name: `{filed}`**" + "\n" + "**‣ Video**: `1080p x264`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `{subtitle}`" + "\n" + f"**‣ File Size**: `{nyaasize}`" + "\n" + f"**‣ Duration**: {durationx}" + "\n" + f"**‣ Downloads**: [🔗Telegram File]({source_link}) [🔗BETA DL]({nyaa_text})"
+        orgtext =  "**#Source_File #NF**" + "\n" + f"**‣ File Name: `{filed}`**" + "\n" + "**‣ Video**: `1080p x264`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `{subtitle}`" + "\n" + f"**‣ File Size**: `{nyaasize}`" + "\n" + f"**‣ Duration**: {durationx}" + "\n" + f"**‣ Downloads**: [🔗Telegram File]({source_link}) [🔗BETA DL]({nyaa_text})"
         rep_id = int(main.message_id)
         await asyncio.sleep(5)
         untextx = await app.send_message(
