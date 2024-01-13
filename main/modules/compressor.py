@@ -91,7 +91,7 @@ async def compress_video(total_time,untext,name,sourcetext):
 
         try:
 
-          await untext.edit_message_text(chat_id=-100115987262, message_id=39489, progress_str)
+          await untext.edit_message_text(chat_id=-100115987262, message_id=39489, text=progress_str)
 
         except:
 
