@@ -32,7 +32,6 @@ def parse():
     for i in b:
         item = {}
         item['title'] = trim_title(i['title'])
-        item['subtitle'] = multi_sub(i['title'])
         item['size'] = i['nyaa_size']   
         item['link'] = "magnet:?xt=urn:btih:" + i['nyaa_infohash']
         data.append(item)
