@@ -15,12 +15,13 @@ def trim_title(title: str):
     title = title.replace("Hataraku Maou-sama!! Part 2", "The Devil is a Part-Timer! S2 Part 2")
     title = title.replace("Tian Guan Ci Fu Di Er Ji", "Heaven Official's Blessing S2")
     title = title.replace("Solo Leveling S01E02 If I Had One More Chance 1080p AMZN WEB-DL DDP2.0 H 264-VARYG (Ore dake Level Up na Ken, Multi-Subs)", "Solo Leveling - 02")
+    title = "Solo Leveling - 03"
     ext = ".mkv"
     title = title + ext
     return title
 
 def multi_sub(title: str):
-    subtitle = title.split()[-1] 
+    subtitle = "English, Chinese, Indonesian, Thai, Vietnamese" 
     return subtitle
 
 def parse():
@@ -32,8 +33,8 @@ def parse():
     for i in b:
         item = {}
         item['title'] = trim_title(i['title'])
-        item['size'] = i['nyaa_size']   
-        item['link'] = "magnet:?xt=urn:btih:" + i['nyaa_infohash']
+        item['size'] = '1.1 GiB' 
+        item['link'] = "magnet:?xt=urn:btih:4e0a5bd60202132ec14e883a68b5ffd4fd3cff5b"
         data.append(item)
     data.reverse()
     return data
